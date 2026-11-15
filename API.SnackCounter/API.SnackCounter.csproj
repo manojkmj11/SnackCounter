@@ -13,7 +13,6 @@
     <Content Remove="MockHr.Service\**" />
     <None Remove="tests\**" />
     <None Remove="MockHr.Service\**" />
-    <None Include=".github\workflows\dotnet.yml" />
   </ItemGroup>
 
   <ItemGroup>

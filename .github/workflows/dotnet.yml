@@ -23,10 +23,13 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore dependencies
+        working-directory: API.SnackCounter
         run: dotnet restore API.SnackCounter.slnx
 
       - name: Build
+        working-directory: API.SnackCounter
         run: dotnet build API.SnackCounter.slnx --configuration Release --no-restore
 
       - name: Test
+        working-directory: API.SnackCounter
         run: dotnet test API.SnackCounter.slnx --configuration Release --no-build --verbosity normal
