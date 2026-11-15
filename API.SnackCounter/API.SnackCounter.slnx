@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="API.SnackCounter.csproj" />
+  <Project Path="MockHr.Service/MockHr.Service.csproj" />
+  <Project Path="tests/API.SnackCounter.Tests/API.SnackCounter.Tests.csproj" />
+</Solution>
