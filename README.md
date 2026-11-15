@@ -7,14 +7,14 @@ Purchase-linked reimbursement claims are submitted through a durable outbox to t
 The core design and code references are in [DESIGN.md](DESIGN.md). Run the automated suite with:
 
 ```powershell
-dotnet test API.SnackCounter.slnx
+dotnet test API.SnackCounter/API.SnackCounter.slnx
 ```
 
 For local development, configure `ConnectionStrings:SnackCounter` for SQL Server Express. Start Mock HR and the API in separate terminals:
 
 ```powershell
-dotnet run --project MockHr.Service/MockHr.Service.csproj --urls http://localhost:5205
-dotnet run --project API.SnackCounter.csproj --urls http://localhost:5121
+dotnet run --project API.SnackCounter/MockHr.Service/MockHr.Service.csproj --urls http://localhost:5205
+dotnet run --project API.SnackCounter/API.SnackCounter.csproj --urls http://localhost:5121
 ```
 
 Angular/UI integration is optional and remains a work in progress; the backend exposes REST endpoints and SignalR notifications for a client.
